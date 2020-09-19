@@ -1,4 +1,4 @@
-package pl.sda.jawawwa24.lambda;
+package pl.sda.jawawwa24.usystematyzowanie;
 
 import java.util.Optional;
 import java.util.function.Function;
