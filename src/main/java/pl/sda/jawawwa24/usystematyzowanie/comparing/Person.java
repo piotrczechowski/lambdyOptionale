@@ -40,6 +40,8 @@ public class Person {
 
 //      personsList.sort(((o1, o2) -> Person.orderPeson(o1,o2)));
         personsList.sort((Person::orderPeson));
+//        personsList.sort((first, second) -> MyComparing.comparePersons(first, second));
+        personsList.sort(MyComparing::comparePersons);
     }
 
 
