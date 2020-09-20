@@ -14,6 +14,7 @@ public class GraphicCard {
         this.chip = chip;
     }
 
+
     public Chip getChip() {
         return chip;
     }
