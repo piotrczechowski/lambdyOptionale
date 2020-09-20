@@ -54,4 +54,21 @@ public class Example {
                 .ifPresent(s -> System.out.println("Vendor (Optional): " + s));
     }
 
+    static void printChipVendorOptionalWayWithException(Computer computer) {
+        Optional.ofNullable(computer)
+                .map(computer1 -> computer1.getGraphicCard())
+                .map(graphicsCard -> graphicsCard.getChip())
+                .map(chip -> chip.getVendor())
+                .orElseThrow(() -> new IllegalArgumentException("Bląd serwera"));
+
+    }
+    static void printChipvendorOptionaServerComputer (ServerComputer serverComputer) {
+        Optional.ofNullable(serverComputer)
+               .flatMap(serverComputer1 -> serverComputer1.getGraphicsCard())
+                .map(graphicCard -> graphicCard.getChip())
+                .map(chip -> chip.getVendor())
+                .ifPresent(o -> System.out.println("Vendor" + o));
+
+
+    }
 }
